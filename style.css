@@ -29,16 +29,72 @@ body{
 }
 
 .container{
-    width: 80%;
+    width: 85%;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: auto auto;
     margin: 0 auto;
+    gap: 2rem;
+}
+
+.avatar{
+    display: flex;
+    gap: 1.3em;
+}
+
+.avatar img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.avatar-status{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+}
+
+.intro-para{
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 1em 0;
+}
+.main-para{
+    margin-right: 1.7em;
 }
 
 .daniel{
     grid-column: 1 / 3 ;
     grid-row: 1;
+    background-color: var(--Purple-500);
+    position: relative;
+    border-radius: 10px;
+    padding: 2.5em;
+}
+
+.daniel::before{
+    content: "\201f";
+    position: absolute;
+    color: var(--Grey-100);
+    top: -0.72em;
+    right: 0.1em;
+    font-size: 30rem;
+    opacity: 0.5;
+    transform: rotate(180deg) scaleX(-1);
+}
+
+.daniel .avatar img{
+    border: 2px solid var(--Purple-300);
+}
+
+.daniel .avatar-status{
+    color: var(--Grey-100);
+}
+.daniel .intro-para{
+    color: var(--White);
+}
+
+.daniel .main-para{
+    color: var(--Grey-100);
 }
 
 
@@ -46,6 +102,20 @@ body{
 .jonathan{
     grid-column: 3;
     grid-row:1 ;
+    background-color: var(--Grey-400);
+    border-radius: 10px;
+    padding: 2.5em;
+}
+
+.jonathan .avatar-status{
+    color: var(--Grey-100);
+}
+
+.jonathan .intro-para{
+    color: var(--White);
+}
+.jonathan .main-para{
+    color: var(--Grey-100);
 }
 
 .jeanette{
